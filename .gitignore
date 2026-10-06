@@ -1,0 +1,43 @@
+# PDF Info Extractor
+
+This project is a plain Java Maven project for reading PDF files and extracting important information like:
+- Name
+- Email address
+- Phone number
+- Address
+- Company
+
+## Features
+- Uses Apache PDFBox to read PDF text
+- Extracts common personal/business info using regex and heuristics
+- Works well for text-based PDFs
+- Easy to run from command line
+
+## Requirements
+- Java 17+
+- Maven 3+
+
+## Build
+
+```bash
+mvn clean package
+```
+
+## Run
+
+```bash
+java -jar target/pdf-info-extractor-1.0.0.jar your-file.pdf
+```
+
+## Example output
+
+```text
+Name: John Doe
+Email: john.doe@example.com
+Phone: +1 555 123 4567
+Address: 123 Main Street, New York, NY 10001
+Company: Example Inc
+```
+
+## Notes
+For scanned PDFs or image-only PDFs, OCR would be required in addition to PDFBox.
